@@ -103,8 +103,13 @@
   - type: Projectile
     damage:
       types:
+<<<<<<< HEAD
         Blunt: 3
         Heat: 10
+=======
+        Piercing: 7
+        Heat: 3
+>>>>>>> upstream/master
   - type: IgnitionSource
     ignited: true
 
@@ -184,14 +189,8 @@
     solutions:
       ammo:
         maxVol: 15
-  - type: RefillableSolution
-    solution: ammo
-  - type: DrainableSolution
-    solution: ammo
   - type: SolutionInjectOnProjectileHit
     transferAmount: 15
-    solution: ammo
-  - type: InjectableSolution
     solution: ammo
 
 - type: entity
@@ -249,7 +248,9 @@
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
-    state: depleted-uranium
+    layers:
+    - state: uranium
+      shader: unshaded
   - type: Projectile
     damage:
       types:
